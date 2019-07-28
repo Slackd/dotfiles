@@ -1,3 +1,6 @@
 [submodule "spicetify/Themes/PurpleShade"]
 	path = spicetify/Themes/PurpleShade
 	url = https://github.com/theHimanshuShekhar/PurpleShade
+[submodule "spicetify/Themes/ShadowStyle"]
+	path = spicetify/Themes/ShadowStyle
+	url = https://github.com/nektwar/ShadowStyle
