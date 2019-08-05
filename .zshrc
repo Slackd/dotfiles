@@ -112,5 +112,5 @@ source ~/.zsh-aliases
 source ~/.purepower
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-sh ~/bin/invaders1.sh
+sh ~/bin/bunnyfetch
 alias config='/usr/bin/git --git-dir=/home/sam/dotfiles/ --work-tree=/home/sam'

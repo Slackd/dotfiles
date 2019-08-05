@@ -21,7 +21,7 @@
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
@@ -40,18 +40,25 @@ d/home/sam
 	Pic_user
 8
 d/home/sam/Pic_user
-	fed.png
-1
+	..
+0
+d/home/sam
+	Pic_user
+8
 d
 
 # Right window history (oldest to newest):
 D/home/sam
-	..
-0
+	Downloads
+4
+D/home/sam/Downloads
+	Klorax.Retrofuturism.colorscheme
+7
 D
 
 # Command line history (oldest to newest):
 :q
+::q
 
 # Search history (oldest to newest):
 
