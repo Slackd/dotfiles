@@ -114,100 +114,15 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 let g:jsx_ext_required = 0
 
 " Lightline
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ }
-
-"let g:lightline.separator = { 'left': "\ue0b8", 'right': "\ue0be" }
-"let g:lightline.subseparator = { 'left': "\ue0b9", 'right': "\ue0b9" }
-"let g:lightline.tabline_separator = { 'left': "\ue0bc", 'right': "\ue0ba" }
-"let g:lightline.tabline_subseparator = { 'left': "\ue0bb", 'right': "\ue0bb" }
-
-" Lightline
-" Get default from :h lightline
 let g:lightline = {
-    \ 'colorscheme': 'nord',
-    \ }
+      \ 'colorscheme': 'wombat',
+      \ }
 
-let g:lightline.active = {
-    \ 'left': [ [ 'mode', 'paste', 'sep1' ],
-    \           [ 'readonly', 'filename', 'modified' ],
-    \           [ ] ],
-    \ 'right': [ [ 'lineinfo' ],
-    \            [ 'percent' ],
-    \            [ 'filetype' ] ]
-    \ }
+let g:lightline.separator = { 'left': "\ue0b8", 'right': "\ue0be" }
+let g:lightline.subseparator = { 'left': "\ue0b9", 'right': "\ue0b9" }
+let g:lightline.tabline_separator = { 'left': "\ue0bc", 'right': "\ue0ba" }
+let g:lightline.tabline_subseparator = { 'left': "\ue0bb", 'right': "\ue0bb" }
 
-let g:lightline.inactive = {
-    \ 'left': [ [ 'mode', 'paste', 'sep1' ],
-    \           [ 'readonly', 'filename', 'modified' ] ],
-    \ 'right': [ [ 'lineinfo' ],
-    \            [ 'percent' ],
-    \            [ 'filetype' ] ]
-    \ }
-
-let g:lightline.tabline = {
-    \ 'left': [ [ 'tabs' ] ],
-    \ 'right': [ ] }
-
-let g:lightline.tab = {
-    \ 'active': [ 'tabnum', 'filename', 'modified' ],
-    \ 'inactive': [ 'tabnum', 'filename', 'modified' ] }
-
-let g:lightline.component = {
-    \ 'mode': '%{lightline#mode()}',
-    \ 'absolutepath': '%F',
-    \ 'relativepath': '%f',
-    \ 'filename': '%t',
-    \ 'modified': '%M',
-    \ 'bufnum': '%n',
-    \ 'paste': '%{&paste?"PASTE":""}',
-    \ 'readonly': '%R',
-    \ 'charvalue': '%b',
-    \ 'charvaluehex': '%B',
-    \ 'fileencoding': '%{&fenc!=#""?&fenc:&enc}',
-    \ 'fileformat': '%{&ff}',
-    \ 'filetype': '%{&ft!=#""?&ft:"no ft"}',
-    \ 'percent': '%3p%%',
-    \ 'percentwin': '%P',
-    \ 'spell': '%{&spell?&spelllang:""}',
-    \ 'lineinfo': '%3l:%-2v',
-    \ 'line': '%l',
-    \ 'column': '%c',
-    \ 'close': '%999X X ',
-    \ 'winnr': '%{winnr()}',
-    \ 'sep1': ''
-    \}
-
-let g:lightline.mode_map = {
-    \ 'n' : 'N',
-    \ 'i' : 'I',
-    \ 'R' : 'R',
-    \ 'v' : 'V',
-    \ 'V' : 'L',
-    \ "\<C-v>": 'B',
-    \ 'c' : 'C',
-    \ 's' : 'S',
-    \ 'S' : 'S-LINE',
-    \ "\<C-s>": 'S-BLOCK',
-    \ 't': 'T',
-    \ }
-
-
-let g:lightline.separator = {
-    \   'left': '', 'right': ''
-    \}
-let g:lightline.subseparator = {
-    \   'left': '', 'right': '' 
-    \}
-
-let g:lightline.tabline_separator = g:lightline.separator
-let g:lightline.tabline_subseparator = g:lightline.subseparator
-
-let g:lightline.enable = {
-    \ 'statusline': 1,
-    \ 'tabline': 1
-    \ }
 
 "FZF
 " This is the default extra key bindings

@@ -10,8 +10,7 @@ export ZSH="/home/sam/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -109,8 +108,12 @@ source ~/.zsh-aliases
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.purepower
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+#source ~/.purepower
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-sh ~/bin/bunnyfetch
+#sh ~/bin/bunnyfetch
+figlet "FeddySam" | lolcat
 alias config='/usr/bin/git --git-dir=/home/sam/dotfiles/ --work-tree=/home/sam'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
