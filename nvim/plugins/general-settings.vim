@@ -1,16 +1,16 @@
-" Colorscheme settings
+" Color Scheme Settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 
 set termguicolors
 
-" color scheme
+" Color Scheme
 syntax on
-colorscheme onedark
+colorscheme nvcode
 filetype on
 filetype plugin indent on
 
-" lightline
+" Lightline
 set noshowmode
-let g:lightline = { 'colorscheme': 'onedark' }
+let g:lightline = { 'colorscheme': 'seoul256' }
 
 " Plugin Warning Supression for Coc
 let g:coc_disable_startup_warning = 1
@@ -25,3 +25,5 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+" Tagbar Toggle
+nmap <F8> :TagbarToggle<CR>

@@ -1,4 +1,4 @@
-set iskeyword+=-                      	" treat dash separated words as a word text object"
+set iskeyword+=-                      	" Treat dash separated words as a word text object"
 set formatoptions-=cro                  " Stop newline continution of comments
 
 syntax enable                           " Enables syntax highlighing
@@ -8,7 +8,7 @@ set whichwrap+=<,>,[,],h,l
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
-set ruler              			            " Show the cursor position all the time
+set ruler              			        " Show the cursor position all the time
 set cmdheight=2                         " More space for displaying messages
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
@@ -20,7 +20,7 @@ set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=2                        " Always display the status line
-set number relativenumber                              " Line numbers
+set number relativenumber               " Line numbers
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
@@ -35,10 +35,10 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set incsearch
 set guifont=JetBrainsMono\ Nerd\ Font\ 14
 
-" sane text files
+" Sane text files
 set fileformat=unix
 
-" sane editing
+" Sane editing
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -47,5 +47,4 @@ set viminfo='25,\"50,n~/.viminfo
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
-
 
