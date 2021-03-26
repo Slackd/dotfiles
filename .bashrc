@@ -4,6 +4,7 @@ iatest=$(expr index "$-" i)
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 #######################################################
+# For VCPROMPT -> https://github.com/powerman/vcprompt
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
