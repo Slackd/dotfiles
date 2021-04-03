@@ -4,13 +4,32 @@ set termguicolors
 
 " Color Scheme
 syntax on
-colorscheme nvcode
+colorscheme onedark
 filetype on
 filetype plugin indent on
 
 " Lightline
+
+function! GitStatus()
+  let [a,m,r] = GitGutterGetHunkSummary()
+  return printf('+%d ~%d -%d', a, m, r)
+endfunction
+
+function! FileNameWithIcon() abort
+  return winwidth(0) > 70  ?  WebDevIconsGetFileTypeSymbol() . ' ' . expand('%:T') : ''
+endfunction
+
+
 set noshowmode
-let g:lightline = { 'colorscheme': 'seoul256' }
+let g:lightline = { 'colorscheme': 'onedark' }
+let g:lightline.component_function = { 'gitstatus': 'GitStatus' }
+let g:lightline.component = { 'filename_with_icon': '%{FileNameWithIcon()}' }
+
+let g:lightline.active = {
+      \ 'left': [['mode', 'readonly'], ['filename_with_icon', 'modified']],
+      \ 'right': [['lineinfo'], ['percent'], ['gitstatus', 'fileformat', 'fileencoding', 'filetype']]
+      \ }
+
 
 " Plugin Warning Supression for Coc
 let g:coc_disable_startup_warning = 1
