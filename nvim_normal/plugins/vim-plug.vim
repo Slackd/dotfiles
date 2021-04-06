@@ -25,6 +25,7 @@ Plug 'romgrk/barbar.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
+
 call plug#end()
 
 " Automatically install missing plugins on startup
