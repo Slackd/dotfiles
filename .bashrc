@@ -4,7 +4,6 @@ iatest=$(expr index "$-" i)
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 #######################################################
-# For VCPROMPT -> https://github.com/powerman/vcprompt
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -311,7 +310,7 @@ dd()
 
 
 # Random Cow Say Random Things
-fortune | cowsay -f $(ls -f /usr/share/cowsay/*.cow | shuf -n1)
+# fortune | cowsay -f $(ls -f /usr/share/cowsay/*.cow | shuf -n1)
 
 
 #######################################################
@@ -358,7 +357,9 @@ print_before_the_prompt () {
     printf "\n $txtred%s: $bldgrn%s $txtpur%s\n$txtrst" "$USER" "$PWD" "$(vcprompt)"
 }
  
-PROMPT_COMMAND=print_before_the_prompt
-PS1='-> '
+#PROMPT_COMMAND=print_before_the_prompt
+#PS1='-> '
+eval "$(starship init bash)"
 
-alias config='/usr/bin/git --git-dir=/home/sam/dotfiles/ --work-tree=/home/sam'
+#alias config='/usr/bin/git --git-dir=/home/sam/dotfiles/ --work-tree=/home/sam'
+#export PATH=$HOME/.config/nvcode/utils/bin:$PATH
