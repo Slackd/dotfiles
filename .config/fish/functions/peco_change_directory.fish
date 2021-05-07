@@ -6,7 +6,17 @@ function _peco_change_directory
   end
   if [ $foo ]
     builtin cd $foo
+    commandline -f repaint
   else
     commandline ''
   end
+end
+
+function peco_change_directory
+  begin
+    echo $HOME/.config
+    ghq list -p
+    ls -ad */|perl -pe "s#^#$PWD/#"|grep -v \.git
+    ls -ad $HOME/Projects/* |grep -v \.git
+  end | sed -e 's/\/$//' | awk '!a[$0]++' | _peco_change_directory $argv
 end

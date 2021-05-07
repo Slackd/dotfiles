@@ -1,8 +1,18 @@
 # Color
 set -gx TERM xterm-256color
 
+
+# Basic Base functions
+function fish_title
+    echo $argv[1]
+end
+
+function fish_greeting
+end
+
 # Defaults
 set -gx EDITOR nvim
+set -gx BROWSER firefox
 
 # PATH
 set -gx PATH ~/.local/bin $PATH
@@ -26,25 +36,26 @@ if type -q exa
 end
 
 # Aliases
-alias home='cd ~'
-alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias c='clear'
 alias x='exit'
-alias cdK='cd /home/sam/Kernel'
-alias reload='source ~/.zshrc'
 alias eV='nvim ~/.config/nvim/init.lua'
 alias eB='nvim ~/.bashrc'
-alias eX='nvim ~/.Xresources'
 alias eZ='nvim ~/.zshrc'
+alias eF='nvim ~/.config/fish/config.fish'
 alias e='nvim'
 alias vim='nvim'
-alias cdP='cd ~/Projects'
 
-
+alias g git
 alias neofetch="neofetch --ascii_distro fedora_small"
 
+# DNF
+abbr -a dnfu sudo dnf upgrade --refresh
+abbr -a dnfc sudo dnf clean all
+abbr -a dnfi sudo dnf install
+abbr -a dnfr sudo dnf remove
+abbr -a dnfar sudo dnf autoremove
 

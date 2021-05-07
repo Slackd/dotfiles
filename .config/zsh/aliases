@@ -1,5 +1,5 @@
 #######################################################
-# GENERAL ALIAS'S
+# GENERAL ALIASES
 #######################################################
 # To temporarily bypass an alias, we preceed the command with a \
 # EG: the ls command is aliased, but to use the normal ls command you would type \ls
@@ -73,7 +73,7 @@ alias 755='chmod -R 755'
 alias 777='chmod -R 777'
 
 # Neofetch
-alias neofetch="neofetch --ascii /home/sam/.config/neofedora"
+alias neofetch="neofetch --ascii_distro fedora_small"
 
 # Search command line history
 alias h="history | grep "
@@ -112,14 +112,16 @@ alias mountedinfo='df -hT'
 # Specific to me, for this system
 alias c='clear'
 alias x='exit'
-alias dev='cd /home/sam/dev'
-alias reload='source ~/.zshrc | lolcat'
-alias eV='nvim ~/.config/nvim/init.vim'
+alias cdK='cd /home/sam/Kernel'
+alias reload='source ~/.zshrc'
+alias eV='nvim ~/.config/nvim/init.lua'
 alias eB='nvim ~/.bashrc'
 alias eX='nvim ~/.Xresources'
 alias eZ='nvim ~/.zshrc'
 alias e='nvim'
 alias vim='nvim'
+alias cdP='cd ~/Projects'
+
 
 # Alias's for archives
 alias mktar='tar -cvf'
