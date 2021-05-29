@@ -1,5 +1,13 @@
-# Prompt
-eval "$(starship init zsh)"
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git*' formats '(%b) '
+
+# Prompt 
+PROMPT='%F{208}%n%f in %F{226}%~%f %B${vcs_info_msg_0_}%b-> '
+setopt PROMPT_SUBST
 
 # Sources
 source ~/.config/zsh/aliases
@@ -7,11 +15,12 @@ source ~/.config/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source ~/.config/zsh/functions/command-not-found.plugin.zsh
 source ~/.config/zsh/functions/history-substring-search.zsh
 source ~/.config/zsh/functions/zsh-autosuggestions.zsh
-source ~/.config/zsh/functions/colored-man-pages.plugin.zsh
+#source ~/.config/zsh/functions/colored-man-pages.plugin.zsh
 
 # Exports
 export EDITOR='nvim'
 export BROWSER='firefox'
+export PAGER='most'
 
 # Paths
 export PATH=./.local/bin:$PATH
@@ -41,4 +50,4 @@ unset __conda_setup
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
