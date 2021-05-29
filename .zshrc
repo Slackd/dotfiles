@@ -6,16 +6,14 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git*' formats '(%b) '
 
 # Prompt 
-PROMPT='%F{208}%n%f in %F{226}%~%f %B${vcs_info_msg_0_}%b-> '
+PROMPT='🐶 %F{226}%~%f %B${vcs_info_msg_0_}%b❱ '
 setopt PROMPT_SUBST
 
 # Sources
 source ~/.config/zsh/aliases
 source ~/.config/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/functions/command-not-found.plugin.zsh
-source ~/.config/zsh/functions/history-substring-search.zsh
 source ~/.config/zsh/functions/zsh-autosuggestions.zsh
-#source ~/.config/zsh/functions/colored-man-pages.plugin.zsh
 
 # Exports
 export EDITOR='nvim'
@@ -24,6 +22,17 @@ export PAGER='most'
 
 # Paths
 export PATH=./.local/bin:$PATH
+
+# History settings
+export HISTFILE=~/.zsh_history
+export HISTFILESIZE=10000000
+export HISTSIZE=100000
+SAVEHIST=10000000
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt inc_append_history share_history
+export HISTTIMEFORMAT="[%F %T] "
 
 # Git
 GIT_AUTHOR_NAME="Budhaditya Saha"
@@ -50,4 +59,4 @@ unset __conda_setup
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
