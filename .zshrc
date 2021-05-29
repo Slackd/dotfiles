@@ -3,19 +3,18 @@ eval "$(starship init zsh)"
 
 # Sources
 source ~/.config/zsh/aliases
+source ~/.config/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/functions/command-not-found.plugin.zsh
 source ~/.config/zsh/functions/history-substring-search.zsh
 source ~/.config/zsh/functions/zsh-autosuggestions.zsh
+source ~/.config/zsh/functions/colored-man-pages.plugin.zsh
 
 # Exports
 export EDITOR='nvim'
 export BROWSER='firefox'
 
 # Paths
-# Node Js
-npm config set prefix ~/.npm
-export PATH=./.node_modules/.bin:$PATH
-export PATH=./.npm/bin:$PATH
+export PATH=./.local/bin:$PATH
 
 # Git
 GIT_AUTHOR_NAME="Budhaditya Saha"
@@ -40,3 +39,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
