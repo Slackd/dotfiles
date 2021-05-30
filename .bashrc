@@ -83,11 +83,6 @@ export CFLAGS="-march=native -mtune=native -msse4.2 -mavx -msse2avx -O2"
 export CXXFLAGS="$CFLAGS"
 
 #######################################################
-# MACHINE SPECIFIC ALIAS'S
-#######################################################
-
-
-#######################################################
 # GENERAL ALIAS'S
 #######################################################
 # To temporarily bypass an alias, we preceed the command with a \
@@ -317,8 +312,6 @@ dd()
 # Set the ultimate amazing command prompt
 #######################################################
 
-#export PS1="\[\033[38;5;12m\]\d\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;13m\]\@\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;14m\]\H\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\[\033[38;5;9m\]  \s\[$(tput sgr0)\]\[\033[38;5;15m\]-\v\n\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] [\[$(tput sgr0)\]\[\033[38;5;11m\]\$PWD\[$(tput sgr0)\]\[\033[38;5;15m\]] "$(vcprompt)" \\$\[$(tput sgr0)\] -> "
-
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
@@ -356,10 +349,13 @@ txtrst='\e[0m'    # Text Reset
 print_before_the_prompt () {
     printf "\n $txtred%s: $bldgrn%s $txtpur%s\n$txtrst" "$USER" "$PWD" "$(vcprompt)"
 }
- 
-#PROMPT_COMMAND=print_before_the_prompt
-#PS1='-> '
-eval "$(starship init bash)"
+
+PROMPT_COMMAND=print_before_the_prompt
+PS1='🐶 ❱ '
 
 #alias config='/usr/bin/git --git-dir=/home/sam/dotfiles/ --work-tree=/home/sam'
 #export PATH=$HOME/.config/nvcode/utils/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
